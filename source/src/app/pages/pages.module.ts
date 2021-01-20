@@ -8,6 +8,7 @@ import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { InicioComponent } from './inicio/inicio.component';
+import { SafePipe } from '../shared/directives/safepipe.directive';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { InicioComponent } from './inicio/inicio.component';
   declarations: [
     PagesComponent,
     InicioComponent,
+    SafePipe
   ],
 })
 export class PagesModule {

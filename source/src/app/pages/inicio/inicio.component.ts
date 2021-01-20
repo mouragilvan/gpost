@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../../shared/services/database.service';
+
 
 @Component({
   selector: 'ngx-inicio',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  text : any;
+  url: any;
+  constructor(private db: DatabaseService) { }
 
   ngOnInit(): void {
+    this.getText();
   }
 
+  getText(){
+     this.db.getData().subscribe((s: any)=>{
+       this.text = s[0].texto;
+       this.url = s[0].video;      
+     },e=>console.log(e));
+  }
+
+  
 }
