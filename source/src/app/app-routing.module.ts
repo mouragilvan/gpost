@@ -11,9 +11,14 @@ import {
 
 export const routes: Routes = [  
   {
-    path: '',
+    path: 'pages',
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module')
+      .then(m => m.AdminModule),
   },
   {
     path: 'auth',

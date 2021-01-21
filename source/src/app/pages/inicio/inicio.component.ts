@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../shared/services/database.service';
-
+import { SafePipe } from '../../shared/directives/safepipe.directive';
 
 @Component({
   selector: 'ngx-inicio',
@@ -11,6 +11,7 @@ export class InicioComponent implements OnInit {
 
   text : any;
   url: any;
+  safe = SafePipe;
   constructor(private db: DatabaseService) { }
 
   ngOnInit(): void {

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { NbMenuModule } from '@nebular/theme';
-
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -17,12 +16,12 @@ import { SafePipe } from '../shared/directives/safepipe.directive';
     NbMenuModule,
     DashboardModule,
     ECommerceModule,
-    MiscellaneousModule,
+    MiscellaneousModule
   ],
   declarations: [
     PagesComponent,
     InicioComponent,
-    SafePipe
+    SafePipe    
   ],
 })
 export class PagesModule {
