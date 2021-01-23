@@ -53,9 +53,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.title = environment.site.title;
 
-    setTimeout(()=>{
-      this.toggleSidebar();
-    },2000);
+   // setTimeout(()=>{
+   //   this.toggleSidebar();
+   // },2000);
   
     this.currentTheme = this.themeService.currentTheme;
 

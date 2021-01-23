@@ -1,1 +1,22 @@
-<p>painel works!</p>
+<nb-card>
+    <nb-card-body>
+        <form [formGroup]="form">
+         <div class="row">
+             <div class="col-md-12">
+                <textarea nbInput fullWidth placeholder="Textarea" formControlName="texto"></textarea>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-12">
+                <input type="text" nbInput placeholder="Video URL" formControlName="video">
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-12 text-right">
+                <button nbButton status="success" (click)="salvar()">Salvar</button>
+             </div>
+         </div>
+        </form>
+
+    </nb-card-body>
+  </nb-card>

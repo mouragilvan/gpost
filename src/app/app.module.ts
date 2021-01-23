@@ -22,6 +22,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,7 +42,8 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent],
 })
